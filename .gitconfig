@@ -38,3 +38,12 @@
 
 [apply]
 	whitespace = nowarn
+
+[push]
+	default = tracking
+
+[branch]
+	autosetuprebase = always
+
+[branch "master"]
+	rebase = true
