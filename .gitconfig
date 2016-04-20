@@ -2,6 +2,9 @@
 	name = Jorn	Bostelaar
 	email = bostelaarj@gmail.com
 
+[core]
+	excludesfile = ~/.gitignore
+
 [alias]
 	b = branch
 	t = tag
