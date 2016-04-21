@@ -6,5 +6,8 @@ ln -s $d/.gitconfig ~/.gitconfig
 ln -s $d/.git-completion.bash ~/.git-completion.bash
 ln -s $d/.git-prompt.sh ~/.git-prompt.sh
 ln -s $d/.tmux.conf ~/.tmux.conf
+ln -s $d/.jscscrc ~/.jscsrc
+ln -s $d/.vim ~/.vim
+ln -s $d/.vimrc ~/.vimrc
 
 echo '. ~/.bashrc' >> ~/.bash_profile
