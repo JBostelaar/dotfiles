@@ -9,5 +9,6 @@ ln -s $d/.tmux.conf ~/.tmux.conf
 ln -s $d/.jscscrc ~/.jscsrc
 ln -s $d/.vim ~/.vim
 ln -s $d/.vimrc ~/.vimrc
+ln -s $d/.atom/ ~/.atom/
 
 echo '. ~/.bashrc' >> ~/.bash_profile

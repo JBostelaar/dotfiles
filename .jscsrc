@@ -1,4 +1,7 @@
 {
 	"preset": "airbnb",
-    "validateIndentation": "\t"
+    "validateIndentation": "\t",
+	"disallowTrailingComma": true,
+	"requireTrailingComma": null,
+	"maximumLineLength": null
 }

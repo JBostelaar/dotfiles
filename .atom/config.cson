@@ -1,0 +1,17 @@
+"*":
+  core: {}
+  editor:
+    fontSize: 15
+    scrollSensitivity: 80
+    showIndentGuide: true
+    tabLength: 4
+    tabType: "hard"
+  "exception-reporting":
+    userId: "b5aebbe2-b917-0592-83a8-83b80d48892d"
+  "file-icons": {}
+  linter:
+    lintOnFly: false
+  "linter-jscs":
+    configPath: "~/.jscsrc"
+  welcome:
+    showOnStartup: false
