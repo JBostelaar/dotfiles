@@ -11,7 +11,7 @@
   "file-icons": {}
   linter:
     lintOnFly: false
-  "linter-jscs":
-    configPath: "~/.jscsrc"
+  "linter-eslint":
+    eslintrcPath: "~/.eslintrc"
   welcome:
     showOnStartup: false
