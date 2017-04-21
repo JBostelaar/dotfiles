@@ -6,17 +6,23 @@
 	excludesfile = ~/.gitignore
 
 [alias]
+	aa = add -A
+	ac = add -u
 	b = branch
 	t = tag
 	d = diff --stat -p -C
 	ds = diff --staged --stat -p -C
 	ci = commit -v
+	cm = commit -v -m
+	ca = commit -v --amend
 	co = checkout
 	st = status -sb -uall
 	amend = commit -v --amend
 	ll = log --graph --date=relative --topo-order --pretty='format:%C(yellow)%h%C(yellow)%d %Cblue%ar %Cgreenby %an%Creset -- %s'
 	guilt = "!f(){ git log --pretty='format:%an <%ae>' $@ | sort | uniq -c | sort -rn; }; f"
-
+	uncommit = reset --soft HEAD^
+	unstage = reset
+	
 [color]
 	ui = auto
 	branch = auto
