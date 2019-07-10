@@ -1,7 +1,7 @@
 #!/bin/bash
 d=`dirname $0`
 
-ln -s $d/.bashrc ~/.bashrc
+ln -s $d/.zshrc ~/.zshrc
 ln -s $d/.gitconfig ~/.gitconfig
 ln -s $d/.git-completion.bash ~/.git-completion.bash
 ln -s $d/.git-prompt.sh ~/.git-prompt.sh
