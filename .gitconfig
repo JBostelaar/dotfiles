@@ -1,9 +1,10 @@
 [user]
-	name = Jorn	Bostelaar
+	name = Jorn Bostelaar
 	email = bostelaarj@gmail.com
 
 [core]
 	excludesfile = ~/.gitignore
+	ignorecase = true
 
 [alias]
 	aa = add -A

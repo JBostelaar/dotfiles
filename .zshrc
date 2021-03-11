@@ -1,109 +1,27 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/admin/.oh-my-zsh"
+export ZSH="/Users/jornbostelaar/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-POWERLEVEL9K_CONTEXT_TEMPLATE="🤯 "
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='236'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='044'
-
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='235'
-
-POWERLEVEL9K_DIR_HOME_FOREGROUND='044'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='236'
-
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='120'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='237'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='228'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='237'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='197'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='237'
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-  context
-  dir
-  vcs
-)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_SHORTEN_DELIMITER=''
-POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
+# Config 
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Theme
+ZSH_THEME="spaceship"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Plugins
 plugins=(
-  git,
-	zsh-syntax-highlighting,
-	zsh-autosuggestions
+  zsh-syntax-highlighting
+  send
+  zsh-autosuggestions
 )
 
+# Aliases
 alias l='ls -AFhl --color=always'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias root='cd ~/'
 alias h='history'
-alias opf='cd ~/Documents/Projects'
-alias mdave='sudo mkdir /Volumes/dave  && sudo chown -R $(whoami) /Volumes/dave && sshfs labela@192.168.22.14: /Volumes/dave'
-alias umdave='diskutil unmount force /Volumes/dave/'
+alias opf='cd ~/Documents/projects'
 alias deploy='./deploy.sh'
 
 alias nps='npm start'
@@ -112,17 +30,16 @@ alias build='npm run build'
 alias server='npm run server'
 
 alias gcd='git checkout develop && git pull origin develop'
+alias gcm='git checkout master && git pull origin master'
 alias grd='git fetch origin develop && git rebase origin/develop'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 
-export NVM_DIR="/Users/admin/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# Preferred editor for local and remote sessions
+# Exports
 export EDITOR='vim'
 
+export NVM_DIR="/Users/jornbostelaar/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
